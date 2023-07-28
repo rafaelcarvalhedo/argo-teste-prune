@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-teste-2
+  name: pvc-teste
 spec:
   accessModes:
     - ReadWriteOnce
