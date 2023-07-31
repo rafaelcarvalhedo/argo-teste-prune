@@ -11,3 +11,19 @@ spec:
   resources:
     requests:
       storage: 10Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: teste-pod
+spec:
+  containers:
+    - name: my-container
+      image: nginx:latest  # Replace with your desired container image
+      volumeMounts:
+        - name: my-pvc-volume
+          mountPath: /arquivos  # The path inside the container where the PVC will be mounted
+  volumes:
+    - name: my-pvc-volume
+      persistentVolumeClaim:
+        claimName: pvc-teste
