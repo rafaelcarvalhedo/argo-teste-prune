@@ -8,7 +8,7 @@ spec:
   storageClassName: standard-no-delete
   resources:
     requests:
-      storage: 10Gi
+      storage: 5Gi
 ---
 apiVersion: v1
 kind: Pod
