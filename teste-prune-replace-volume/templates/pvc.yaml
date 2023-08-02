@@ -15,9 +15,12 @@ kind: Pod
 metadata:
   name: teste-pod
 spec:
+  securityContext:
+    fsGroup: 0
+    fsGroupChangePolicy: OnRootMismatch
   containers:
     - name: my-container
-      image: nginx:latest  # Replace with your desired container image
+      image: nginx:latest  # Replace with your desired container imag
       volumeMounts:
         - name: my-pvc-volume
           mountPath: /arquivos  # The path inside the container where the PVC will be mounted
