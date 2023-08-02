@@ -15,9 +15,6 @@ kind: Pod
 metadata:
   name: teste-pod
 spec:
-  securityContext:
-    fsGroup: 0
-    fsGroupChangePolicy: OnRootMismatch
   containers:
     - name: my-container
       image: nginx:latest  # Replace with your desired container imag
